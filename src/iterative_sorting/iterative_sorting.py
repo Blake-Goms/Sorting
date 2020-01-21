@@ -29,19 +29,19 @@ def selection_sort( arr ):
 def bubble_sort( arr ):
     print(f'\nOirginal List:\n{arr}')
     for i in range(0, len(arr)):
-        print(f'\nOuter Loop Counter: {i}\n')
+        print(f'\nOuter Loop Counter/Index: {i}, Value= {arr[i]}\n')
         for j in range(0, len(arr)):
             print(f'{arr}, \nComparing: {arr[j]}, {arr[i]}')
             if arr[j] > arr[i]:
                 print(f'Swapping: {arr[j]}, {arr[i]}')
                 arr[i], arr[j] = arr[j] , arr[i]
-            #elif(arr[j] < arr[i]):
-            #    print(f'Pair already sorted: {arr[j], arr[i]}\n')
-
     return arr
 
-# arr1 = [1, 5, 8, 4, 2, 9, 6, 0, 3, 7]
-# bubble_sort(arr1)
+arr1 = [1, 5, 8, 4, 2, 9, 6, 0, 3, 7]
+#arr2 = [9,8,7,6,5,4,3,2,1,0] # This one makes more sense to follow if confused!
+bubble_sort(arr1)
+
+
 # STRETCH: implement the Count Sort function below
 def count_sort( arr, maximum=-1 ):
 
