@@ -1,19 +1,23 @@
 # TO-DO: complete the helper function below to merge 2 sorted arrays
 def merge( arrA, arrB ):
     merged_arr = []
+    #merged_arr = [None] * len(arrA) + len(arrB)
+    # Try this for preallocating your list, which improves performance
+    # tried it, didn't work with my solution
     listA = len( arrA ) 
     listB = len( arrB )
+    # a, b are keeping track of the index we are looking at
     a = 0
     b = 0
 
     # this loop will continuously check each index and add them together
     while a < listA and b < listB:
-        # If tis index is smaller add [a] first to merge 
+        # If this index is smaller add [a] first to merge 
         if arrA[a] < arrB[b]:
             merged_arr.append(arrA[a])
             print(f'arrA: {arrA}')
             a += 1
-            # else add [b] first 
+        # else add [b] first 
         else:
             merged_arr.append(arrB[b])
             b += 1
